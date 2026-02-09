@@ -5,8 +5,208 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
 
+    <link rel="stylesheet" href="style.css">
+    <link rel="import" href="src/fonts/Gravitas_One/GravitasOne-Regular.ttf">
+
 </head>
 <body>
-test
+    <header id="home">
+
+        <nav class="navbar">
+            <div class="navleft">
+                <span class="navtleft">Creative Profile</span>   
+            </div>
+
+            <div class="navli">
+                <a href="#home">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#aboutme">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+        </nav>
+    
+        <div class="hero-content">
+            <div class="word-stack">
+                <span class="top">Hannah Jane</span>
+                <span class="bottom">PORTFOLIO</span>
+            </div>
+            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </header>
+
+    <section class="skills">
+        <img src="SRC/logos/canva-seeklogo.svg" alt="">
+        <img src="SRC/logos/krita-seeklogo-2.svg" alt="">
+        <img src="SRC/logos/chatgpt-icon.svg" alt="">
+        <img src="SRC/logos/adobe-express.svg" alt="">
+    </section>
+   
+    <h3 class="section-head-line">PROJECTS</h3>
+    <div class="categories">
+       
+        <div class="category" onclick="openGallery('logo')">
+            <img src="projects/logo_design/UPLAS_logo.png" alt="">
+            <p>Logo Designs</p>
+        </div>
+
+        <div class="category" onclick="openGallery('publication')">
+            <img src="projects/publication_materials/Photobooth-promotional_signage.png" alt="">
+            <p>Publication Material Designs</p>
+        </div>
+
+        <div class="category" onclick="openGallery('tshirt')">
+            <img src="projects/tshirt_design/1.png" alt="">
+            <p>T-Shirt Designs</p>
+        </div>
+
+        <div class="category" onclick="openGallery('community')">
+            <img src="projects/community_outreach_design_proposal/VICE-M_s Watermark/7.png" alt="">
+            <p>Community Outreach Designs</p>
+        </div>
+
+    </div>
+
+    <div id="galleryModal" class="modal">
+        <span class="close" onclick="closeGallery()">&times;</span>
+        <div class="modal-content" id="modalContent"></div>
+    </div>
+
+
+<!-- 
+    <section class="projects">
+        <div class="bg">
+            <h1 class="section-head-line">Projects</h1>
+        
+            <div class="logo-designs">
+                <h2>Logo Designs</h2>
+                <img src="projects/logo_design/Billiard.png" alt="">
+                <img src="projects/logo_design/UPLAS_logo.png" alt="">
+            </div>
+        </div>
+        
+        
+
+        <h2>Publication Materials</h2>
+        <img src="projects/publication_materials/INITIUM/1.png" alt="">
+        <img src="projects/publication_materials/INITIUM/6.png" alt="">
+        <img src="projects/publication_materials/UPLAS flyer/1.png" alt="">
+        <img src="projects/publication_materials/UPLAS flyer/2.png" alt="">
+        <img src="projects/publication_materials/UPLAS flyer/3.png" alt="">
+        <img src="projects/publication_materials/PEER-KASIYAHAN.png" alt="">
+        <img src="projects/publication_materials/Photobooth-promotional_signage.png" alt="">
+        <img src="projects/publication_materials/ORSEM PPT.png" alt="">
+        <img src="projects/publication_materials/STAGE PLAN.png" alt="">
+        <img src="projects/publication_materials/TeachersDayGreetings.png" alt="">
+        <img src="projects/publication_materials/UPLAS ORSEM.png" alt="">
+
+        <h2>T-SHirt Designs</h2>
+        <img src="projects/tshirt_design/1.png" alt="">
+        <img src="projects/tshirt_design/2.png" alt="">
+        <img src="projects/tshirt_design/3.png" alt="">
+
+        <h2>Community Outreach Designs</h2>
+        <img src="projects/community_outreach_design_proposal/Title Page.png" alt="">
+        <img src="projects/community_outreach_design_proposal/Libreng Sakay Project Proposal/" alt="">
+        <img src="projects/community_outreach_design_proposal/VICE-M_s Watermark/1.png" alt="">
+        <img src="projects/community_outreach_design_proposal/VICE-M_s Watermark/2.png" alt="">
+        <img src="projects/community_outreach_design_proposal/VICE-M_s Watermark/3.png" alt="">
+        <img src="projects/community_outreach_design_proposal/VICE-M_s Watermark/4.png" alt="">
+        <img src="projects/community_outreach_design_proposal/VICE-M_s Watermark/7.png" alt="">
+       
+
+    </section> -->
+
+    <section class="aboutme">
+        <h1>About Me</h1>
+        <p>I am an enthusiastic and detail-oriented creative with experience in social media management and a strong passion for graphic design and video editing. During my internship, I had the opportunity to edit publication materials and layouts for high-profile clients, including the City Vice Mayor, honing both my design skills and professional approach. I am also knowledgeable in using various AI tools to enhance creativity and efficiency in my work.</p> 
+    </section>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        // image sources for each category
+        const galleries = {
+        logo: [
+            'projects/logo_design/Billiard.png', 
+            'projects/logo_design/UPLAS_logo.png'
+        ],
+        publication: [
+            'projects/publication_materials/ORSEM PPT.png',
+            'projects/publication_materials/PEER-KASIYAHAN.png',
+            'projects/publication_materials/Photobooth-promotional_signage.png',
+            'projects/publication_materials/STAGE PLAN.png',
+            'projects/publication_materials/TeachersDayGreetings.png',
+            'projects/publication_materials/UPLAS ORSEM.png',
+            'projects/publication_materials/INITIUM/1.png',
+            'projects/publication_materials/INITIUM/6.png',
+            'projects/publication_materials/UPLAS flyer/1.png',
+            'projects/publication_materials/UPLAS flyer/2.png',
+            'projects/publication_materials/UPLAS flyer/3.png',
+            'projects/publication_materials/UPLAS flyer/flyer.png'
+        ],
+        community: [
+            'projects/community_outreach_design_proposal/Libreng Sakay Project Proposal/1.png',
+            'projects/community_outreach_design_proposal/Libreng Sakay Project Proposal/2.png',
+            'projects/community_outreach_design_proposal/Libreng Sakay Project Proposal/3.png',
+            'projects/community_outreach_design_proposal/Libreng Sakay Project Proposal/4.png',
+            'projects/community_outreach_design_proposal/Libreng Sakay Project Proposal/5.png',
+            'projects/community_outreach_design_proposal/Libreng Sakay Project Proposal/6.png',
+            'projects/community_outreach_design_proposal/Libreng Sakay Project Proposal/7.png',
+            'projects/community_outreach_design_proposal/Libreng Sakay Project Proposal/8.png',
+            'projects/community_outreach_design_proposal/Libreng Sakay Project Proposal/9.png',
+            'projects/community_outreach_design_proposal/Libreng Sakay Project Proposal/10.png',
+            'projects/community_outreach_design_proposal/Libreng Sakay Project Proposal/11.png',
+            'projects/community_outreach_design_proposal/VICE-M_s Watermark/1.png',
+            'projects/community_outreach_design_proposal/VICE-M_s Watermark/2.png',
+            'projects/community_outreach_design_proposal/VICE-M_s Watermark/3.png',
+            'projects/community_outreach_design_proposal/VICE-M_s Watermark/4.png',
+            'projects/community_outreach_design_proposal/VICE-M_s Watermark/5.png',
+            'projects/community_outreach_design_proposal/VICE-M_s Watermark/6.png',
+            'projects/community_outreach_design_proposal/VICE-M_s Watermark/7.png',
+            'projects/community_outreach_design_proposal/Title Page.png',
+        ],
+        tshirt: [
+            'projects/tshirt_design/1.png',
+            'projects/tshirt_design/2.png',
+            'projects/tshirt_design/3.png',
+        ]
+        };
+
+        function openGallery(category) {
+        const modal = document.getElementById('galleryModal');
+        const modalContent = document.getElementById('modalContent');
+        
+        // clear previous images
+        modalContent.innerHTML = '';
+
+        // add images for selected category
+        galleries[category].forEach(src => {
+            const img = document.createElement('img');
+            img.src = src;
+            modalContent.appendChild(img);
+        });
+
+        modal.style.display = 'block';
+        }
+
+        function closeGallery() {
+        document.getElementById('galleryModal').style.display = 'none';
+        }
+
+        // close modal when clicking outside content
+        window.onclick = function(e) {
+        const modal = document.getElementById('galleryModal');
+        if (e.target == modal) {
+            modal.style.display = 'none';
+        }
+        }
+
+    </script>
 </body>
 </html>
+
+
