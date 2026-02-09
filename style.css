@@ -35,6 +35,14 @@ body {
     font-weight: normal;
     /* font-style:normal; */
 }
+
+@font-face {
+    font-family: 'GravitasOne';
+    src: url('src/fonts/Gravitas_One/GravitasOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 img{
     height: 200px;
     width: auto;
@@ -44,6 +52,9 @@ img{
     font-family: 'GravitasOne';
 }
 
+.t2{
+    
+}
 
 
 /* NAVIGATION BAR */
