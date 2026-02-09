@@ -15,6 +15,23 @@ body {
     color: #161416;
 }
 
+
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap');
+.gravitas-one-regular {
+    font-family: "Gravitas One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Gravitas+One&family=Lavishly+Yours&display=swap');
+  .lavishly-yours-regular {
+    font-family: "Lavishly Yours", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
+
 @font-face {
     font-family: 'GravitasOne';
     src: url('src/fonts/Gravitas_One/GravitasOne-Regular.ttf') format('truetype');
@@ -49,11 +66,7 @@ img{
     /* margin-left: 10px; */
 }
 .section-head-line{
-    font-family: 'GravitasOne';
-}
-
-.t2{
-    
+    font-family: 'Gravitas One';
 }
 
 
@@ -151,10 +164,16 @@ nav a{
     background-image: linear-gradient(to bottom, #b97fdd, rgba(255, 255, 255, 0));
 }
 
-.section-head-line{
+.head-line{
     text-align: center;
     padding: 50px;
     font-size: 60px;
+    /* background-color: #b97fdd; */
+    color: #b97fdd;
+   
+}
+
+.projects{
     background-color: #b97fdd;
     color: #eceaee;
 }
@@ -173,7 +192,7 @@ nav a{
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease;
-    padding: 2rem;
+    padding: 1.5rem;
     background-color: #eceaee;
     border-radius: 10px;
 }
@@ -223,4 +242,11 @@ nav a{
     font-size: 40px;
     color: white;
     cursor: pointer;
+}
+
+
+/* ABOUT SECTION */
+.aboutme  {
+    padding: 0 10rem 5rem 10rem;
+    margin: 5rem;
 }
