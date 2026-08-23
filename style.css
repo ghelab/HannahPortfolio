@@ -279,12 +279,6 @@ nav a{
   
 /* =========================================================
    MOBILE VERSION
-   Fixed values — no clamp(), vw, or responsive sizing
-   ========================================================= */
-
-  /* =========================================================
-   MOBILE VERSION
-   Fixed values — no clamp(), vw, or responsive sizing
    ========================================================= */
 
 @media screen and (max-width: 768px) {
